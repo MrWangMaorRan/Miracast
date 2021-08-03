@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+   <RelativeLayout
+       android:id="@+id/rlt_file"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       app:layout_constraintTop_toTopOf="parent"
+       android:background="@mipmap/bkg_live">
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="手机投屏"
+         android:layout_alignParentTop="true"
+         android:layout_centerInParent="true"
+         android:layout_marginTop="20dp"
+         android:textSize="25sp"
+         android:textColor="#ffffff"/>
+       <ImageView
+           android:id="@+id/doodles_setting"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentRight="true"
+           android:background="@mipmap/setting"
+           android:layout_marginTop="25dp"
+           android:layout_marginRight="20dp"/>
+       <ImageView
+           android:id="@+id/img_select"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentLeft="true"
+           android:background="@mipmap/select"
+           android:layout_marginTop="140dp"
+           android:layout_marginLeft="20dp"/>
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="已经连接：客厅的米"
+           android:textColor="#ffffff"
+           android:textSize="20sp"
+          android:layout_marginTop="135dp"
+           android:layout_marginLeft="60dp"/>
+   </RelativeLayout>
+<LinearLayout
+    android:id="@+id/ll_doodles"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    app:layout_constraintTop_toBottomOf="@id/rlt_file"
+    android:layout_marginTop="50dp">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/draw_bkg" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="快来动手展示你的涂鸦吧～"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="#252424"
+        android:layout_marginTop="20sp"/>
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ll_doodles">
+        <ImageView
+            android:id="@+id/start_tou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/doodles_btn_start"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="120dp"/>
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

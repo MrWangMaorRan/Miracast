@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+   <RelativeLayout
+       android:id="@+id/rlt1"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       app:layout_constraintTop_toTopOf="parent"
+       android:background="@mipmap/bkg_live">
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="手机投屏"
+         android:layout_alignParentTop="true"
+         android:layout_centerInParent="true"
+         android:layout_marginTop="20dp"
+         android:textSize="25sp"
+         android:textColor="#ffffff"/>
+       <ImageView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentRight="true"
+           android:background="@mipmap/setting"
+           android:layout_marginTop="25dp"
+           android:layout_marginRight="20dp"/>
+       <ImageView
+           android:id="@+id/img_select"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentLeft="true"
+           android:background="@mipmap/select"
+           android:layout_marginTop="140dp"
+           android:layout_marginLeft="20dp"/>
+       <TextView
+           android:id="@+id/dianji"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="选择投屏设备"
+           android:textColor="#ffffff"
+           android:textSize="20sp"
+          android:layout_marginTop="135dp"
+           android:layout_marginLeft="60dp"/>
+   </RelativeLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@id/rlt1"
+    app:layout_constraintBottom_toBottomOf="parent">
+    <ImageView
+        android:id="@+id/im"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/imgbtn_start"
+        tools:layout_editor_absoluteX="127dp"
+        tools:layout_editor_absoluteY="364dp"
+        android:layout_centerInParent="true"/>
+    <Button
+        android:id="@+id/bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="停止"></Button>
+</RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

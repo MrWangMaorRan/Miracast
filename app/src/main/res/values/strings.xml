@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">无线手机投屏助手</string>
+
+
+    <string name="privacy_and_user">隐私政策与用户协议</string>
+    <string name="bluetooth_and_wlan">本服务需要联网，调用蓝牙，WLAN,移动数据</string>
+    <string name="network">网络权限，用于打开或关闭蓝牙，更改WLAN</string>
+    <string name="click_agree">状态和网络连接性。点击“同意”,即表示您同意</string>
+    <string name="content">上述内容及手机克隆</string>
+    <string name="privacy">隐私政策</string>
+    <string name="and">及</string>
+    <string name="user">用户协议</string>
+    <string name="agree_btn">同意</string>
+    <string name="Cancel">取消</string>
+</resources>

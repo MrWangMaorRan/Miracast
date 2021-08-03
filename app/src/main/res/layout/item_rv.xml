@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:padding="10dp">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/tou_name"/>
+<TextView
+    android:layout_marginLeft="15dp"
+    android:id="@+id/tv"
+    android:textSize="20sp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"></TextView>
+</LinearLayout>

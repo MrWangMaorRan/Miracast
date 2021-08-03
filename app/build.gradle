@@ -1,0 +1,107 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    signingConfigs {
+        release {
+            storeFile file('C:\\Users\\w1054\\Desktop\\签名文件\\miracast.jks')
+            storePassword '123456'
+            keyPassword '123456'
+            keyAlias 'key0'
+        }
+        debug {
+            storeFile file('C:\\Users\\w1054\\Desktop\\签名文件\\miracast.jks')
+            storePassword '123456'
+            keyPassword '123456'
+            keyAlias 'key0'
+        }
+    }
+    productFlavors {
+        vivo {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "vivo"]
+        }
+        oppo {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "oppo"]
+        }
+        xiaomi {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "xiaomi"]
+        }
+        tengxun {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "tengxun"]
+        }
+        alibaba {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "alibaba"]
+        }
+        qu360 {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "qu360"]
+        }
+        baidu {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "baidu"]
+        }
+        huawei {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "huawei"]
+        }
+        google {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "google"]
+        }
+    }
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.zizhong.mobilescreen"
+        minSdkVersion 25
+        targetSdkVersion 30
+        versionCode 3
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk { // 设置支持的 SO 库构架，注意这里要根据你的实际情况来设置
+            abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64' , 'armeabi'
+        }
+        signingConfig signingConfigs.release
+        flavorDimensions "versionCode"
+    }
+
+    buildTypes {
+        release {
+            debuggable true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation(name: 'source', ext: 'aar')
+
+    implementation 'com.github.bumptech.glide:glide:4.10.0'
+    //图片选择器
+    implementation 'io.github.lucksiege:pictureselector:v2.7.3-rc06'
+
+    // 友盟统计SDK
+    implementation  'com.umeng.umsdk:common:9.4.0'// 必选
+    implementation  'com.umeng.umsdk:asms:1.2.3'// 必选
+    implementation 'com.umeng.umsdk:apm:1.3.1' // 错误分析升级为独立SDK，看crash数据请一定集成，可选
+    implementation  'com.umeng.umsdk:abtest:1.0.0'//使用U-App中ABTest能力，可选
+    compile(name: 'open_ad_sdk', ext: 'aar')
+//    implementation 'com.pangle.cn:ads-sdk:3.5.0.6'  //穿山甲
+}

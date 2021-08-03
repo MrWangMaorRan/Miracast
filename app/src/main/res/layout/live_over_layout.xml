@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+   <RelativeLayout
+       android:id="@+id/rlt1"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       app:layout_constraintTop_toTopOf="parent"
+       android:background="@mipmap/bkg_live">
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="手机投屏"
+         android:layout_alignParentTop="true"
+         android:layout_centerInParent="true"
+         android:layout_marginTop="20dp"
+         android:textSize="25sp"
+         android:textColor="#ffffff"/>
+       <ImageView
+           android:id="@+id/setting"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentRight="true"
+           android:background="@mipmap/setting"
+           android:layout_marginTop="25dp"
+           android:layout_marginRight="20dp"/>
+       <ImageView
+           android:id="@+id/img_select"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentLeft="true"
+           android:background="@mipmap/select"
+           android:layout_marginTop="140dp"
+           android:layout_marginLeft="20dp"/>
+       <TextView
+           android:id="@+id/dianji"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="选择设备连接"
+           android:textColor="#ffffff"
+           android:textSize="20sp"
+          android:layout_marginTop="135dp"
+           android:layout_marginLeft="60dp"/>
+   </RelativeLayout>
+
+<FrameLayout
+    android:id="@+id/live_banner"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@+id/rlt1"
+    app:layout_constraintBottom_toTopOf="@+id/rel_5" />
+    <RelativeLayout
+        android:id="@+id/rel_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/rlt1"
+        app:layout_constraintBottom_toBottomOf="@+id/linl3">
+        <ImageView
+            android:id="@+id/start_projection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/imgbtn_start"
+            android:visibility="visible"
+            tools:layout_editor_absoluteX="127dp"
+            tools:layout_editor_absoluteY="364dp"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+    <TextView
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/rel_5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/tishi"
+        android:text="投屏失败，请点击重试"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
+<RelativeLayout
+    android:id="@+id/rel_2"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@id/rlt1"
+    android:layout_marginTop="100dp"
+    app:layout_constraintBottom_toBottomOf="@+id/linl3">
+
+    <ImageView
+        android:id="@+id/over_projection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/over"
+        tools:layout_editor_absoluteX="127dp"
+        tools:layout_editor_absoluteY="364dp"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>
+<RelativeLayout
+    android:visibility="gone"
+    android:id="@+id/linl3"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@+id/rel_2"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent">
+
+    <Button
+        android:id="@+id/btn_over"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/btn_over"
+      android:layout_centerInParent="true"/>
+
+
+</RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
